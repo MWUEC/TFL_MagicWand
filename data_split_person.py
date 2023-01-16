@@ -23,7 +23,7 @@ It will generate new files with the following structure:
 ├──person_split
 │   ├── test
 │   ├── train
-│   └──valid
+│   └── valid
 """
 
 from __future__ import absolute_import

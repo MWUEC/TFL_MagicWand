@@ -60,7 +60,7 @@ def prepare_original_data(folder, name, data, file_to_read):  # pylint: disable=
           elif line[2] != "-":
             data_new[DATA_NAME].append([float(i) for i in line[0:3]])
       data.append(data_new)
-  else:
+  else: # folder name is negative
     with open(file_to_read, "r") as f:
       lines = csv.reader(f)
       data_new = {}

@@ -36,7 +36,7 @@ class DataLoader(object):
   def __init__(self, train_data_path, valid_data_path, test_data_path,
                seq_length):
     self.dim = 3
-    self.seq_length = seq_length
+    self.seq_length = seq_length # train.py の seq_length
     self.label2id = {"circleCW": 0, "circleACW": 1, "check": 2, "negative": 3}
     self.train_data, self.train_label, self.train_len = self.get_data_file(
         train_data_path, "train")
@@ -65,8 +65,8 @@ class DataLoader(object):
     """Get neighbour padding."""
     noise_level = 20
     padded_data = []
-    if (len(data) == 0):
-      data = [0]
+    #if (len(data) == 0):
+    #  data = [0]
     # Before- Neighbour padding
     tmp_data = (np.random.rand(seq_length, dim) - 0.5) * noise_level + data[0]
     tmp_data[(seq_length -
@@ -81,12 +81,13 @@ class DataLoader(object):
   def format_support_func(self, padded_num, length, data, label):
     """Support function for format.(Helps format train, valid and test.)"""
     # Add 2 padding, initialize data and label
-    length *= padded_num
+    length *= padded_num # length = train_len * 2
     features = np.zeros((length, self.seq_length, self.dim))
-    labels = np.zeros(length)
+    labels = np.zeros(length) # 中身 0, 長さ length の配列labels を定義
     # Get padding for train, valid and test
+    # zip() は 引数のタプル作成関数
     for idx, (data, label) in enumerate(zip(data, label)):
-      padded_data = self.pad(data, self.seq_length, self.dim)
+      padded_data = self.pad(data, self.seq_length, self.dim) # (data, 128, dim)
       for num in range(padded_num):
         features[padded_num * idx + num] = padded_data[num]
         labels[padded_num * idx + num] = self.label2id[label]
