@@ -36,7 +36,7 @@ LABEL_NAME = "gesture"
 DATA_NAME = "accel_ms2_xyz"
 folders = ["circleCW", "circleACW", "check"]
 names = [
-    "AK", "AKL", "1", "2", "3"
+    "AK", "AKL", "1", "2", "3", "4"
 ]
 
 
