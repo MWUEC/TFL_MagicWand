@@ -87,6 +87,8 @@ class DataLoader(object):
     # Get padding for train, valid and test
     # zip() は 引数のタプル作成関数
     for idx, (data, label) in enumerate(zip(data, label)):
+      if len(data) == 0 or len(label) == 0:
+        break
       padded_data = self.pad(data, self.seq_length, self.dim) # (data, 128, dim)
       for num in range(padded_num):
         features[padded_num * idx + num] = padded_data[num]
