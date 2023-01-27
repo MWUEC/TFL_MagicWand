@@ -36,7 +36,8 @@ LABEL_NAME = "gesture"
 DATA_NAME = "accel_ms2_xyz"
 folders = ["circleCW", "circleACW", "check"]
 names = [
-    "iida", "sato", "shigeoka", "terada", "yamanaka"
+    "iida", "sato", "terada", "yamanaka"
+    "kanada", "canada"
 ]
 
 
