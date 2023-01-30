@@ -32,14 +32,14 @@ class TestSplitPerson(unittest.TestCase):
     train_names = ["iida"]
     valid_names = ["sato"]
     test_names = ["terada"]
-    dengyl_num = 30
-    liucx_num = 30
-    tangsy_num = 30
+    train_num = 40
+    valid_num = 40
+    test_num = 40
     train_data, valid_data, test_data = person_split(self.data, train_names,
                                                      valid_names, test_names)
-    self.assertEqual(len(train_data), dengyl_num)
-    self.assertEqual(len(valid_data), liucx_num)
-    self.assertEqual(len(test_data), tangsy_num)
+    self.assertEqual(len(train_data), train_num)
+    self.assertEqual(len(valid_data), valid_num)
+    self.assertEqual(len(test_data), test_num)
     self.assertIsInstance(train_data, list)
     self.assertIsInstance(valid_data, list)
     self.assertIsInstance(test_data, list)
