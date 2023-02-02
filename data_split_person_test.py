@@ -29,9 +29,9 @@ class TestSplitPerson(unittest.TestCase):
     self.data = read_data("./data/complete_data")
 
   def test_person_split(self):
-    train_names = ["iida"]
-    valid_names = ["sato"]
-    test_names = ["terada"]
+    train_names = ["1"]
+    valid_names = ["2"]
+    test_names = ["3"]
     train_num = 40
     valid_num = 40
     test_num = 40
