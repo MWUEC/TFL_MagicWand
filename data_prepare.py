@@ -34,7 +34,10 @@ import random
 
 LABEL_NAME = "gesture"
 DATA_NAME = "accel_ms2_xyz"
-folders = ["circleCW", "circleACW", "check"]
+folders = [
+  "circleCW", 
+  #"circleACW", 
+  "check"]
 names = [
 #    "iida", "sato", "terada", "yamanaka",
 #    "kanada", "canada",

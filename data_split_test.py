@@ -28,7 +28,12 @@ class TestSplit(unittest.TestCase):
 
   def setUp(self):  # pylint: disable=g-missing-super-call
     self.data = read_data("./data/complete_data")
-    self.num_dic = {"circleCW": 0, "circleACW": 0, "check": 0, "negative": 0}
+    self.num_dic = {
+      "circleCW": 0, 
+      #"circleACW": 0, 
+      "check": 0, 
+      "negative": 0
+      }
     with open("./data/complete_data", "r") as f:
       lines = f.readlines()
       self.num = len(lines)
@@ -52,15 +57,21 @@ class TestSplit(unittest.TestCase):
     train_data_50, valid_data_50, test_data_0 = split_data(self.data, 0.5, 0.5)
     train_data_60, valid_data_20, test_data_20 = split_data(
         self.data, 0.6, 0.2)
-    len_60 = int(self.num_dic["circleCW"] * 0.6) + int(
-        self.num_dic["circleACW"] * 0.6) + int(self.num_dic["check"] * 0.6) + int(
-            self.num_dic["negative"] * 0.6)
-    len_50 = int(self.num_dic["circleCW"] * 0.5) + int(
-        self.num_dic["circleACW"] * 0.5) + int(self.num_dic["check"] * 0.5) + int(
-            self.num_dic["negative"] * 0.5)
-    len_20 = int(self.num_dic["circleCW"] * 0.2) + int(
-        self.num_dic["circleACW"] * 0.2) + int(self.num_dic["check"] * 0.2) + int(
-            self.num_dic["negative"] * 0.2)
+    len_60 = int(
+      self.num_dic["circleCW"] * 0.6) + int(
+      #self.num_dic["circleACW"] * 0.6) + int(
+      self.num_dic["check"] * 0.6) + int(
+      self.num_dic["negative"] * 0.6)
+    len_50 = int(
+      self.num_dic["circleCW"] * 0.5) + int(
+      #self.num_dic["circleACW"] * 0.5) + int(
+      self.num_dic["check"] * 0.5) + int(
+      self.num_dic["negative"] * 0.5)
+    len_20 = int(
+      self.num_dic["circleCW"] * 0.2) + int(
+      #self.num_dic["circleACW"] * 0.2) + int(
+      self.num_dic["check"] * 0.2) + int(
+      self.num_dic["negative"] * 0.2)
     self.assertEqual(len(train_data_0), 0)
     self.assertEqual(len(train_data_50), len_50)
     self.assertEqual(len(train_data_60), len_60)
