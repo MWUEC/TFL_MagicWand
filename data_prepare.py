@@ -41,7 +41,7 @@ folders = [
 names = [
 #    "iida", "sato", "terada", "yamanaka",
 #    "kanada", "canada",
-    "1", "2", "3", "4", "5", "6", "7", "8"
+    "1", "2", "3"#, "4", "5", "6", "7", "8"
 ]
 
 
@@ -103,9 +103,9 @@ def generate_negative_data(data):  # pylint: disable=redefined-outer-name
     z_increase = (random.random() - 0.5) * 10
     for j in range(128):
       dic[DATA_NAME].append([
-          start_x + j * x_increase + (random.random() - 0.5) * 6, # +-1000 +- j*5 +- 3 = -1643 ~ 1643
-          start_y + j * y_increase + (random.random() - 0.5) * 6,
-          start_z + j * z_increase + (random.random() - 0.5) * 6
+          start_x + j * x_increase + (random.random() - 0.5) * 20, # +-1000 +- j*5 +- 3 = -1643 ~ 1643
+          start_y + j * y_increase + (random.random() - 0.5) * 20, # * 6
+          start_z + j * z_increase + (random.random() - 0.5) * 20  # * 6
       ])
     data.append(dic)
   # Random

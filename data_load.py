@@ -39,7 +39,7 @@ class DataLoader(object):
     self.seq_length = seq_length # train.py の seq_length
     self.label2id = {
       "circleCW": 0, 
-      #"circleACW": 1, 
+      "circleACW": 1, 
       "check": 1, 
       "negative": 2
       }

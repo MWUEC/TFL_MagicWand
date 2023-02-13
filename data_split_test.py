@@ -30,7 +30,7 @@ class TestSplit(unittest.TestCase):
     self.data = read_data("./data/complete_data")
     self.num_dic = {
       "circleCW": 0, 
-      #"circleACW": 0, 
+      "circleACW": 0, 
       "check": 0, 
       "negative": 0
       }
