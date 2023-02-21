@@ -62,9 +62,9 @@ if __name__ == "__main__":
       "1", "4", "7", "8",
       "negative3", "negative4", "negative5", "negative6"
   ]
-  valid_names = ["2", "5"
+  valid_names = ["2", "5", "9"
     , "negative2", "negative7"]
-  test_names = ["3", "6"
+  test_names = ["3", "6", "10"
     , "negative1", "negative8"]
   train_data, valid_data, test_data = person_split(data, train_names,
                                                    valid_names, test_names)

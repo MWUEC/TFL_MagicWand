@@ -59,17 +59,17 @@ class TestSplit(unittest.TestCase):
         self.data, 0.6, 0.2)
     len_60 = int(
       self.num_dic["circleCW"] * 0.6) + int(
-      #self.num_dic["circleACW"] * 0.6) + int(
+      self.num_dic["circleACW"] * 0.6) + int(
       self.num_dic["check"] * 0.6) + int(
       self.num_dic["negative"] * 0.6)
     len_50 = int(
       self.num_dic["circleCW"] * 0.5) + int(
-      #self.num_dic["circleACW"] * 0.5) + int(
+      self.num_dic["circleACW"] * 0.5) + int(
       self.num_dic["check"] * 0.5) + int(
       self.num_dic["negative"] * 0.5)
     len_20 = int(
       self.num_dic["circleCW"] * 0.2) + int(
-      #self.num_dic["circleACW"] * 0.2) + int(
+      self.num_dic["circleACW"] * 0.2) + int(
       self.num_dic["check"] * 0.2) + int(
       self.num_dic["negative"] * 0.2)
     self.assertEqual(len(train_data_0), 0)

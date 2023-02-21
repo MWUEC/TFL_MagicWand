@@ -40,8 +40,8 @@ class DataLoader(object):
     self.label2id = {
       "circleCW": 0, 
       "circleACW": 1, 
-      "check": 1, 
-      "negative": 2
+      "check": 2, 
+      "negative": 3
       }
     self.train_data, self.train_label, self.train_len = self.get_data_file(
         train_data_path, "train")
