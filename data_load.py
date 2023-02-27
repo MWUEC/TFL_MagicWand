@@ -35,7 +35,7 @@ class DataLoader(object):
 
   def __init__(self, train_data_path, valid_data_path, test_data_path,
                seq_length):
-    self.dim = 2 # self.label2id.length - 1
+    self.dim = 3 # 3で固定。ジェスチャーの数とかに依らない
     self.seq_length = seq_length # train.py の seq_length
     self.label2id = {
       "circleCW": 0, 
