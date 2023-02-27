@@ -54,7 +54,7 @@ def split_data(data, train_ratio, valid_ratio):  # pylint: disable=redefined-out
   test_data = []  # pylint: disable=redefined-outer-name
   num_dic = {
     "circleCW": 0, 
-    "circleACW": 0, 
+#    "circleACW": 0, 
     "check": 0, 
     "negative": 0}
   for idx, item in enumerate(data):  # pylint: disable=unused-variable

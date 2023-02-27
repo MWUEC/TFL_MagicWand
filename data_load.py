@@ -35,13 +35,13 @@ class DataLoader(object):
 
   def __init__(self, train_data_path, valid_data_path, test_data_path,
                seq_length):
-    self.dim = 3
+    self.dim = 2 # self.label2id.length - 1
     self.seq_length = seq_length # train.py の seq_length
     self.label2id = {
       "circleCW": 0, 
-      "circleACW": 1, 
-      "check": 2, 
-      "negative": 3
+      #"circleACW": 1, 
+      "check": 1, 
+      "negative": 2
       }
     self.train_data, self.train_label, self.train_len = self.get_data_file(
         train_data_path, "train")
