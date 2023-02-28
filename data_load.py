@@ -70,12 +70,11 @@ class DataLoader(object):
     """Get neighbour padding."""
     noise_level = 20
     padded_data = []
-    #if (len(data) == 0):
-    #  data = [0]
+    
     # Before- Neighbour padding
+    #           random_arrays[seq_length][dim] <- random range = 0 ~ 1
     tmp_data = (np.random.rand(seq_length, dim) - 0.5) * noise_level + data[0]
-    tmp_data[(seq_length -
-              min(len(data), seq_length)):] = data[:min(len(data), seq_length)]
+    tmp_data[(seq_length - min(len(data), seq_length)):] = data[:min(len(data), seq_length)]
     padded_data.append(tmp_data)
     # After- Neighbour padding
     tmp_data = (np.random.rand(seq_length, dim) - 0.5) * noise_level + data[-1]

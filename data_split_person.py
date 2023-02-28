@@ -59,13 +59,13 @@ def person_split(whole_data, train_names, valid_names, test_names):  # pylint: d
 if __name__ == "__main__":
   data = read_data("./data/complete_data")
   train_names = [
-      "1", "4", "7", "8",
+      "1", "4", #"7", "8",
       "negative3", "negative4", "negative5", "negative6"
   ]
-  valid_names = ["2", "5", "9"
-    , "negative2", "negative7"]
-  test_names = ["3", "6", "10"
-    , "negative1", "negative8"]
+  valid_names = ["2", "5",# "9",
+      "negative2", "negative7"]
+  test_names = ["3", #"6", "10",
+      "negative1", "negative8"]
   train_data, valid_data, test_data = person_split(data, train_names,
                                                    valid_names, test_names)
   if not os.path.exists("./person_split"):

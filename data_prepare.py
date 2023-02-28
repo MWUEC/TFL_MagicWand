@@ -41,7 +41,7 @@ folders = [
 names = [
 #    "iida", "sato", "terada", "yamanaka",
 #    "kanada", "canada",
-    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+    "1", "2", "3", "4", "5"#, "6", "7", "8", "9", "10"
 ]
 
 
@@ -95,9 +95,9 @@ def generate_negative_data(data):  # pylint: disable=redefined-outer-name
       dic = {DATA_NAME: [], LABEL_NAME: "negative", "name": "negative7"}
     else:
       dic = {DATA_NAME: [], LABEL_NAME: "negative", "name": "negative6"}
-    start_x = (random.random() - 0.5) * 2000 #+-1000
-    start_y = (random.random() - 0.5) * 2000
-    start_z = (random.random() - 0.5) * 2000
+    start_x = (random.random() - 0.5) * 3000 #+-1000
+    start_y = (random.random() - 0.5) * 3000
+    start_z = (random.random() - 0.5) * 3000
     x_increase = (random.random() - 0.5) * 10 #+-5
     y_increase = (random.random() - 0.5) * 10
     z_increase = (random.random() - 0.5) * 10
@@ -117,9 +117,9 @@ def generate_negative_data(data):  # pylint: disable=redefined-outer-name
     else:
       dic = {DATA_NAME: [], LABEL_NAME: "negative", "name": "negative6"}
     for j in range(128):
-      dic[DATA_NAME].append([(random.random() - 0.5) * 2000, # -1000 ~ 1000
-                             (random.random() - 0.5) * 2000,
-                             (random.random() - 0.5) * 2000])
+      dic[DATA_NAME].append([(random.random() - 0.5) * 4000, # -1000 ~ 1000
+                             (random.random() - 0.5) * 4000,
+                             (random.random() - 0.5) * 4000])
     data.append(dic)
   # Stay still
   for i in range(100):
@@ -129,14 +129,14 @@ def generate_negative_data(data):  # pylint: disable=redefined-outer-name
       dic = {DATA_NAME: [], LABEL_NAME: "negative", "name": "negative7"}
     else:
       dic = {DATA_NAME: [], LABEL_NAME: "negative", "name": "negative6"}
-    start_x = (random.random() - 0.5) * 2000 # -1000 ~ 1000
-    start_y = (random.random() - 0.5) * 2000
-    start_z = (random.random() - 0.5) * 2000
+    start_x = (random.random() - 0.5) * 4000 # -1000 ~ 1000
+    start_y = (random.random() - 0.5) * 4000
+    start_z = (random.random() - 0.5) * 4000
     for j in range(128):
       dic[DATA_NAME].append([
-          start_x + (random.random() - 0.5) * 100, # -1020 ~ 1020
-          start_y + (random.random() - 0.5) * 100, #default : 40
-          start_z + (random.random() - 0.5) * 100
+          start_x + (random.random() - 0.5) * 200, # -1020 ~ 1020
+          start_y + (random.random() - 0.5) * 200, #default : 40
+          start_z + (random.random() - 0.5) * 200
       ])
     data.append(dic)
 
